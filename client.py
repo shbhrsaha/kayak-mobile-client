@@ -10,12 +10,17 @@
     to learn your UUID and HASH with mitmproxy
 """
 
+import sys
 import json
 import requests
 
 # Replace the following two variables with your UUID and HASH
 UUID = ""
 HASH = ""
+
+if not UUID:
+    print "Please set up your UUID and HASH according to the instructions in the README"
+    sys.exit()
 
 origin_airport = raw_input("Departure airport code: ")
 dest_airport = raw_input("Destination airport code: ")
